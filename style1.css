@@ -1,0 +1,224 @@
+body {
+    background-color: rgb(207, 203, 203);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .header {
+    display: flex;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .left{
+    flex: 12%;
+    /* padding: 15px 0; */
+    display: block;
+    background-color: white;
+    margin: 2rem;
+    margin-right: 0.2rem;
+    text-align: center;
+  }
+
+  .left h2 {
+    margin: 0.85rem;
+  }
+
+  .right {
+    flex: 80%;
+    margin: 2rem;
+    margin-left: 0rem;
+  }
+
+  #new-task-input {
+    width: 99.5%;
+    font-size: 18px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-right: 2rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 12rem;
+  }
+  
+  #myMenu li a {
+    padding: 3.7rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  #myMenu .link-active {
+    background-color:  rgb(96 165 250);
+    /* font-weight: bold; */
+  }
+  
+  #myMenu li a:hover {
+    background-color: rgba(204, 216, 236, 0.9);
+    border: 1px solid rgb(109, 102, 102);
+  }
+
+  .right .task-list {
+    display: block;
+    background-color: rgb(240, 233, 233);
+    margin: 0;
+    height: 92%;
+    padding: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .right .add-task .text {
+    width: 90%;
+    font-size: 18px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    /* margin-right: 2rem; */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .right .add-task .btn_add{
+    padding: 1.1rem;
+    width: 9%;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(149, 192, 245);
+    border: 1px solid rgb(109, 102, 102);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .right .add-task .btn_add:hover{
+    background-color: rgba(204, 216, 236, 0.9);
+  }
+
+  .right .task-list .bg{
+    background-color: white;
+    display: block;
+    margin: 0.7rem;
+    height: 95%;
+    border-top-style: solid;
+    border-top: 3px solid rgb(96 165 250);
+     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /* .right .task-list .container{ 
+    display: grid;
+  } */
+
+  .right .task-list .grid-container-edit{
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: 20rem auto auto auto;
+  }
+
+  .right .task-list .grid-container-progress{
+    display: grid;
+    /* gap: 3rem; */
+    grid-template-columns: 30rem auto;
+  }
+  
+  .right .task-list .grid-container{
+    display: grid;
+    /* gap: 3rem; */
+    grid-template-columns: 22rem auto 28rem;
+  }
+
+   .grid-container .grid-item1{
+    display: flex;
+    font-size: 18px;
+    text-align: left;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 10rem;
+    padding-right: 3rem;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .grid-container-progress .grid-item1{
+    display: flex;
+    font-size: 18px;
+    text-align: left;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 10rem;
+    padding-right: 3rem;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .grid-container-edit .grid-item1{
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 5rem;
+    /* padding-right: 3rem; */
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+  }
+
+
+  .right .task-list h3{
+    margin: 2rem;
+    font-size: x-large;
+  }
+
+  /* .right .table #checkbox{
+    margin-right: 5rem;
+  } */
+
+  .right .task-list .grid-container:hover {
+    transition: 0.1s;
+    border-top: 1px solid #dddddd transparent;
+    border-bottom: 1px solid #dddddd transparent;
+    border: 2px solid rgb(96 165 250);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+     color: black;
+}
+
+  .right .task-list .edit-btn{
+    border-color: rgb(96 165 250);
+    /* background-color: rgb(96 165 250); */
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding: 0.3rem;
+    width: 70%;
+    margin-right: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .right .task-list #app{
+    text-align: center; 
+    height: 100%;
+    /* margin-top: 2rem ; */
+ }
+
+
+.right .task-list .btn_add:hover{
+    background-color: rgb(96 165 250);
+}
+
+.progress .color{
+    position: absolute;
+    background-color: rgb(96 165 250);
+    width: 0px;
+    height: 0.6rem;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}
+
+
+
+
