@@ -213,6 +213,10 @@ body {
 
 
 
+  .right  .grid-container #checkbox{
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+  }
 
 
 
