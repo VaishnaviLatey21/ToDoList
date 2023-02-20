@@ -5,7 +5,7 @@ const addTaskBtn = document.querySelector(".btn_add");
 const newtask = document.querySelector("#newtask");
 const priority = document.querySelector("#priority");
 const progressStatus = document.querySelector("#progressStatus");
-const closeBtn = document.querySelector(".btn_close");
+const closeBtn = document.querySelector(".btn_close")
 
 function addTask() {
     var task = document.createElement('div');

@@ -67,6 +67,10 @@ body {
     border: 1px solid rgb(109, 102, 102);
   }
 
+  #removeBtn {
+    display: none;
+  }
+
   .right .task-list {
     display: block;
     background-color: rgb(240, 233, 233);
@@ -169,6 +173,15 @@ body {
   }
 
   .right .task-list .grid-container .btn_close{
+    cursor: pointer;
+    position: absolute;
+    transform: translate(0%, -50%);
+    font-size: 20px;
+    margin-left: 69rem;
+    margin-top: 2.2rem;
+  }
+
+  .right .task-list .grid-container .remove_btn{
     cursor: pointer;
     position: absolute;
     transform: translate(0%, -50%);
