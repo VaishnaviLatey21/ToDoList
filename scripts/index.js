@@ -1,10 +1,11 @@
 const taskcontainer = document.querySelector(".container");
 console.log(taskcontainer);
+const taskList = document.querySelector(".grid-container");
 const addTaskBtn = document.querySelector(".btn_add");
 const newtask = document.querySelector("#newtask");
 const priority = document.querySelector("#priority");
 const progressStatus = document.querySelector("#progressStatus");
-const closeBtn = document.querySelector("#btn_close")
+const closeBtn = document.querySelector(".btn_close");
 
 function addTask() {
     var task = document.createElement('div');
@@ -28,11 +29,9 @@ function addTask() {
     taskChild.forEach(element => {
         element.classList.add("grid-item1")
     });
-    // let button = document.createElement('button');
-    // button.classList.
-    // task.append();
     taskcontainer.appendChild(task);
 }
+
 
 addTaskBtn.addEventListener("click", function () {
     if (newtask.value == '' || priority.value == '' || progressStatus.value == '') {
@@ -40,6 +39,11 @@ addTaskBtn.addEventListener("click", function () {
     } else {
         addTask();
     }
+})
+
+closeBtn.addEventListener("click", function() {
+    taskcontainer.removeChild(taskList);
+    // taskList.remove(taskcontainer);
 })
 
 
