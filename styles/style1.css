@@ -168,24 +168,13 @@ body {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .right .task-list .grid-container-edit{
-    display: grid;
-    row-gap: 40px;
-    grid-template-columns: 20rem auto auto auto;  
-  }
-
-  .right .task-list .grid-container-progress{
+  .grid-container-progress{
     display: grid;
     /* gap: 3rem; */
     grid-template-columns: 30rem auto;
   }
   
-  
- 
-
-
-
-  .grid-container-progress .grid-item1{
+  .grid-item2{
     display: flex;
     font-size: 18px;
     text-align: left;
@@ -197,7 +186,16 @@ body {
     border-bottom: 1px solid #dddddd;
   }
 
-  .grid-container-edit .grid-item1{
+  .progress .color{
+    position: absolute;
+    background-color: rgb(96 165 250);
+    width: 0px;
+    height: 0.6rem;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}
+
+  .grid-item3{
     display: flex;
     font-size: 18px;
     text-align: center;
@@ -209,18 +207,15 @@ body {
     border-bottom: 1px solid #dddddd;
   }
 
+  /* editing task css  */
 
-
-
-
-  .right  .grid-container #checkbox{
-    margin-right: 1rem;
-    margin-top: 0.2rem;
+  .grid-container-edit{
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: 20rem auto auto auto;  
   }
 
-
-
-  .right .task-list .edit-btn{
+  .edit-btn{
     border-color: rgb(96 165 250);
     /* background-color: rgb(96 165 250); */
     font-weight: bold;
@@ -233,26 +228,8 @@ body {
     cursor: pointer;
   }
 
-  .right .task-list #app{
-    text-align: center; 
-    height: 100%;
-    /* margin-top: 2rem ; */
- }
 
 
-
-.progress .color{
-    position: absolute;
-    background-color: rgb(96 165 250);
-    width: 0px;
-    height: 0.6rem;
-    border-radius: 15px;
-    animation: progres 4s infinite linear;    
-}
-
-/* .addBlock{
-  display: flex;
-} */
 
 
 
