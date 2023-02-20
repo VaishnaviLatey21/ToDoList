@@ -128,7 +128,8 @@ body {
   .right .task-list .grid-container{
     display: grid;
     /* gap: 3rem; */
-    grid-template-columns: 25rem 20rem auto ;
+    /* grid-template-columns: 10px fit-content fit-content fit-content auto; */
+    grid-template-columns: 50px  repeat(4, minmax(0, 1fr))
   }
 
    .grid-container .grid-item1{
@@ -173,9 +174,9 @@ body {
     position: absolute;
     transform: translate(0%, -50%);
     font-size: 17px;
-    margin-left: 10rem;
+    /* margin-left: 13rem; */
     margin-top: 0.6rem;
-    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+    /* padding: 0.1rem 0.3rem 0.1rem 0.3rem; */
   }
 
   .right  .grid-container #checkbox{
