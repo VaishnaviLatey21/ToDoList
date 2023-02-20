@@ -67,11 +67,6 @@ body {
     border: 1px solid rgb(109, 102, 102);
   }
 
-  #checkbox{
-    margin-right: 1rem;
-    
-  }
-
   .right .task-list {
     display: block;
     background-color: rgb(240, 233, 233);
@@ -133,7 +128,7 @@ body {
   .right .task-list .grid-container{
     display: grid;
     /* gap: 3rem; */
-    grid-template-columns: 25rem 20rem auto;
+    grid-template-columns: 25rem 20rem auto ;
   }
 
    .grid-container .grid-item1{
@@ -177,11 +172,16 @@ body {
     cursor: pointer;
     position: absolute;
     transform: translate(0%, -50%);
-    font-size: 20px;
-    margin-left: 13rem;
+    font-size: 17px;
+    margin-left: 10rem;
     margin-top: 0.6rem;
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
   }
 
+  .right  .grid-container #checkbox{
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+  }
 
   .right .task-list h3{
     margin: 2rem;

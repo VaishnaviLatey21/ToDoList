@@ -17,7 +17,7 @@ function addTask() {
     var inProgress = document.createElement('div');
     var btn_container = document.createElement('div');
     var close_btn = document.createElement('button');
-    // checkBox.checked = true; 
+    checkBox.checked = true; 
     taskContent.innerText = newtask.value;
     priorityDiv.innerText = priority.value;
     inProgress.innerText = progressStatus.value;
@@ -49,14 +49,7 @@ addTaskBtn.addEventListener("click", function () {
 })
 
 closeBtn.addEventListener("click", function() {
-    // taskcontainer.removeChild(taskList);
-    // taskList.remove(taskcontainer);
-    var current_tasks = document.querySelectorAll(".btn_close");
-    for (var i=0; i<current_tasks.length; i++){
-        current_tasks[i].onclick = function(){
-        taskList.remove();
-        }
-            }
+    taskcontainer.removeChild(taskList);
 })
 
 
