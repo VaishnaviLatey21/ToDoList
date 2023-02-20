@@ -67,8 +67,9 @@ body {
     border: 1px solid rgb(109, 102, 102);
   }
 
-  #removeBtn {
-    display: none;
+  #checkbox{
+    margin-right: 1rem;
+    
   }
 
   .right .task-list {
@@ -177,17 +178,8 @@ body {
     position: absolute;
     transform: translate(0%, -50%);
     font-size: 20px;
-    margin-left: 69rem;
-    margin-top: 2.2rem;
-  }
-
-  .right .task-list .grid-container .remove_btn{
-    cursor: pointer;
-    position: absolute;
-    transform: translate(0%, -50%);
-    font-size: 20px;
-    margin-left: 69rem;
-    margin-top: 2.2rem;
+    margin-left: 13rem;
+    margin-top: 0.6rem;
   }
 
 
@@ -195,10 +187,6 @@ body {
     margin: 2rem;
     font-size: x-large;
   }
-
-  /* .right .table #checkbox{
-    margin-right: 5rem;
-  } */
 
   .right .task-list .grid-container:hover {
     transition: 0.1s;
