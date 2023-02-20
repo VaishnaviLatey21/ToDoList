@@ -14,6 +14,7 @@ body {
     display: flex;
   }
 
+  /* left container css */
   .left{
     flex: 12%;
     /* padding: 15px 0; */
@@ -28,21 +29,6 @@ body {
     margin: 0.85rem;
   }
 
-  .right {
-    flex: 80%;
-    margin: 2rem;
-    margin-left: 0rem;
-  }
-
-  #new-task-input {
-    width: 99.5%;
-    font-size: 18px;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    margin-right: 2rem;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  }
-
   #myMenu {
     list-style-type: none;
     padding: 0;
@@ -50,42 +36,44 @@ body {
     margin-bottom: 12rem;
   }
   
-  #myMenu li a {
+  .menu a {
     padding: 3.7rem;
     text-decoration: none;
     color: black;
     display: block;
   }
-  
-  #myMenu .link-active {
+
+  .link-active {
     background-color:  rgb(96 165 250);
-    /* font-weight: bold; */
   }
-  
-  #myMenu li a:hover {
+
+  .menu a:hover {
     background-color: rgba(204, 216, 236, 0.9);
     border: 1px solid rgb(109, 102, 102);
   }
 
-  .right .task-list {
-    display: block;
-    background-color: rgb(240, 233, 233);
-    margin: 0;
-    height: 92%;
-    padding: 1rem;
-    margin-right: 0.5rem;
+  /* right container css  */
+  .right {
+    flex: 80%;
+    margin: 2rem;
+    margin-left: 0rem;
   }
 
-  .right .add-task .text {
+  /* top container  css  */
+  .addBlock {
+    display: flex;
+    /* width: 200%; */
+  }
+
+  .text {
     width: 90%;
     font-size: 18px;
     padding: 1rem;
     border: 1px solid #ddd;
-    /* margin-right: 2rem; */
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 4px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .right .add-task .btn_add{
+  .btn_add{
     padding: 1.1rem;
     width: 9%;
     font-size: 15px;
@@ -95,11 +83,22 @@ body {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .right .add-task .btn_add:hover{
+  .btn_add:hover{
     background-color: rgba(204, 216, 236, 0.9);
   }
 
-  .right .task-list .bg{
+  /* middle container css    */
+   .task-list {
+    display: block;
+    background-color: rgb(240, 233, 233);
+    margin: 0;
+    height: 92%;
+    /* width: 200%; */
+    padding: 1rem;
+    margin-right: 0.5rem;
+  }
+
+   .bg{
     background-color: white;
     display: block;
     margin: 0.7rem;
@@ -109,31 +108,29 @@ body {
      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
 
-  /* .right .task-list .container{ 
-    display: grid;
-  } */
-
-  .right .task-list .grid-container-edit{
-    display: grid;
-    row-gap: 40px;
-    grid-template-columns: 20rem auto auto auto;
+  h3{
+    margin: 2rem;
+    font-size: x-large;
   }
 
-  .right .task-list .grid-container-progress{
+  /* list container css for Task List */
+
+  .grid-container{
     display: grid;
-    /* gap: 3rem; */
-    grid-template-columns: 30rem auto;
-  }
-  
-  .right .task-list .grid-container{
-    display: grid;
-    /* gap: 3rem; */
-    /* grid-template-columns: 10px fit-content fit-content fit-content auto; */
     grid-template-columns: 50px  repeat(4, minmax(0, 1fr))
   }
 
-   .grid-container .grid-item1{
-    display: flex;
+  .grid-container:hover {
+    transition: 0.1s;
+    border-top: 1px solid #dddddd transparent;
+    border-bottom: 1px solid #dddddd transparent;
+    border: 2px solid rgb(96 165 250);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+     color: black;
+  }
+
+  .grid-item1{
+    /* display: flex; */
     font-size: 18px;
     text-align: left;
     padding-top: 1.5rem;
@@ -144,6 +141,49 @@ body {
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
   }
+
+  #checkbox{
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+  }
+
+  .btn_close{
+    cursor: pointer;
+    position: absolute;
+    transform: translate(0%, -50%);
+    font-size: 17px;
+    /* margin-left: 13rem; */
+    margin-top: 0.6rem;
+    /* padding: 0.1rem 0.3rem 0.1rem 0.3rem; */
+  }
+
+  /* task progrress css  */
+
+  #new-task-input {
+    width: 99.5%;
+    font-size: 18px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-right: 2rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .right .task-list .grid-container-edit{
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: 20rem auto auto auto;  
+  }
+
+  .right .task-list .grid-container-progress{
+    display: grid;
+    /* gap: 3rem; */
+    grid-template-columns: 30rem auto;
+  }
+  
+  
+ 
+
+
 
   .grid-container-progress .grid-item1{
     display: flex;
@@ -169,34 +209,12 @@ body {
     border-bottom: 1px solid #dddddd;
   }
 
-  .right .task-list .grid-container .btn_close{
-    cursor: pointer;
-    position: absolute;
-    transform: translate(0%, -50%);
-    font-size: 17px;
-    /* margin-left: 13rem; */
-    margin-top: 0.6rem;
-    /* padding: 0.1rem 0.3rem 0.1rem 0.3rem; */
-  }
 
-  .right  .grid-container #checkbox{
-    margin-right: 1rem;
-    margin-top: 0.2rem;
-  }
 
-  .right .task-list h3{
-    margin: 2rem;
-    font-size: x-large;
-  }
 
-  .right .task-list .grid-container:hover {
-    transition: 0.1s;
-    border-top: 1px solid #dddddd transparent;
-    border-bottom: 1px solid #dddddd transparent;
-    border: 2px solid rgb(96 165 250);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-     color: black;
-}
+
+
+
 
   .right .task-list .edit-btn{
     border-color: rgb(96 165 250);
@@ -218,9 +236,6 @@ body {
  }
 
 
-.right .task-list .btn_add:hover{
-    background-color: rgb(96 165 250);
-}
 
 .progress .color{
     position: absolute;
@@ -231,10 +246,9 @@ body {
     animation: progres 4s infinite linear;    
 }
 
-.addBlock{
+/* .addBlock{
   display: flex;
-  /* border: solid black; */
-}
+} */
 
 
 

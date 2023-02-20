@@ -27,7 +27,20 @@ function addTask() {
     close_btn.addEventListener('click', function() {
         taskcontainer.removeChild(task);
     });
+    // checkBox.addEventListener('click', function() {
+    //     checkBox.checked;
+    // });
     // checkBox.style.display = 'block';
+
+    checkBox.addEventListener("onChange", function() {
+    if (checkBox.checked) {
+        alert("checked");
+        } else {
+          alert ("unchecked")
+        }
+});
+
+
     btn_container.appendChild(close_btn);
     box_container.appendChild(checkBox);
     task.append(box_container);

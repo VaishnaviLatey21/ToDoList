@@ -5,37 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
-    
     <link rel="stylesheet" href="./styles/style1.css">
 
 </head>
 <body>
     <header class="header">
+         <!-- left container div start -->
         <div class="left">
-            <h2>Tasks</h2>
-            <ul id="myMenu">
-                <li class="link-active">
-                    <a href="/">Task List</a>
-                </li>
-                <li><a href="./task_progress.html">Task Progress</a></li>
-                <li><a href="/edit_task.html">Editing the task</a></li>
-            </ul>
-        </div>
-        <div class="right">
-            <div class="add-task">
-                    <div class="addBlock">
-                        <input type="text" class="text" name="newtask" id="newtask" placeholder="New task">
-                        <input type="text" class="text" name="priority" id="priority" placeholder="Priority">
-                        <input type="text" class="text" name="progressStatus" id="progressStatus" placeholder="Progress status">
-                        <button class='btn_add'>Add</button>
-                        <!-- <button class="text" id="removeBtn">&times;</button>b  -->
-                    </div>
+            <div><h2>Tasks</h2></div>
+            <div id="myMenu">
+                <div class="menu link-active"><a href="/">Task List</a></div>
+                <div class="menu"><a href="./task_progress.html">Task Progress</a></div>
+                <div class="menu"><a href="/edit_task.html">Editing the task</a></div>
             </div>
+        </div>
+         <!-- left container div end -->
+
+        <div class="right">
+            <!-- top container starts -->
+            <div class="addBlock">
+                <input type="text" class="text" name="newtask" id="newtask" placeholder="New task">
+                <input type="text" class="text" name="priority" id="priority" placeholder="Priority">
+                <input type="text" class="text" name="progressStatus" id="progressStatus" placeholder="Progress status">
+                <button class='btn_add'>Add</button>
+            </div>
+            <!-- top container ends -->
 
             <section class="task-list">
                 <div class="bg">
-                    <h3>All Tasks</h3>
+                    <div><h3>All Tasks</h3></div>
+                    <!-- middle container starts  -->
                     <div class="container">
+                        <!--  row of list  -->
                         <div class="grid-container">
                             <div class="grid-item1"><input type="checkbox" id="checkbox" name="checkbox"></div>
                             <div class="grid-item1"> App Design</div>
@@ -43,6 +44,7 @@
                             <div class="grid-item1">In Progress </div>
                             <div class="grid-item1"><button class="btn_close" value="close" id="btn_close">&times;</button></div>
                         </div>
+                        <!--  row ends  -->
                         <div class="grid-container">
                             <div class="grid-item1"><input type="checkbox" id="checkbox" name="checkbox"></div>
                             <div class="grid-item1">Dashboard Design</div>
@@ -58,6 +60,7 @@
                             <div class="grid-item1"><button class="btn_close" value="close" id="btn_close">&times;</button></div>      
                         </div>
                     </div>
+                    <!-- middle container ends  -->
                 </div>
             </section>
 
