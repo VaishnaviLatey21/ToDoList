@@ -18,7 +18,7 @@ function addTask() {
     var inProgress = document.createElement('div');
     var btn_container = document.createElement('div');
     var close_btn = document.createElement('button');
-    // checkBox.checked = true; 
+    checkBox.checked = true; 
     taskContent.innerText = newtask.value;
     priorityDiv.innerText = priority.value;
     inProgress.innerText = progressStatus.value;
@@ -27,19 +27,11 @@ function addTask() {
     close_btn.addEventListener('click', function() {
         taskcontainer.removeChild(task);
     });
-    // checkBox.addEventListener('click', function() {
-    //     checkBox.checked;
-    // });
+
+    checkBox.addEventListener('click', function() {
+        checkBox.checked = true;
+    });
     // checkBox.style.display = 'block';
-
-    checkBox.addEventListener("onChange", function() {
-    if (checkBox.checked) {
-        alert("checked");
-        } else {
-          alert ("unchecked")
-        }
-});
-
 
     btn_container.appendChild(close_btn);
     box_container.appendChild(checkBox);
@@ -55,7 +47,12 @@ function addTask() {
     });
     taskcontainer.appendChild(task);
 
+    // var list = [];
+    // localStorage.setItem('taskList', JSON.stringify(list));
+    // var listItems = JSON.parse(localStorage.getItem("list"));
+    // console.log(listItems);
 }
+
 
 addTaskBtn.addEventListener("click", function () {
     if (newtask.value == '' || priority.value == '' || progressStatus.value == '') {
