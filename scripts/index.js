@@ -7,6 +7,7 @@ const priority = document.querySelector("#priority");
 const progressStatus = document.querySelector("#progressStatus");
 const closeBtn = document.querySelector(".btn_close");
 const checkBox = document.querySelector("#checkbox");
+const progressBar = document.querySelector('#progress');
 
 function addTask() {
     var task = document.createElement('div');
@@ -29,7 +30,11 @@ function addTask() {
     });
 
     checkBox.addEventListener('click', function() {
-        checkBox.checked = true;
+        if(checkBox.checked == true){
+            checkBox.checked = false
+        }else{
+            checkBox.checked = true
+        }
     });
     // checkBox.style.display = 'block';
 
@@ -47,11 +52,35 @@ function addTask() {
     });
     taskcontainer.appendChild(task);
 
-    // var list = [];
-    // localStorage.setItem('taskList', JSON.stringify(list));
-    // var listItems = JSON.parse(localStorage.getItem("list"));
-    // console.log(listItems);
 }
+
+// var countDownDate = new Date("Feb 26, 2023 18:00:00");
+// console.log(countDownDate);
+// var startDate = new Date("Feb 24, 2023, 17:30:00");
+// console.log(startDate);
+// var distanceWhole = countDownDate - startDate;
+// console.log(distanceWhole);
+
+var countDownDate = new Date("Feb 26, 2023 18:00:00");
+console.log(countDownDate);
+var x = setInterval(function() {
+    var now = new Date();
+    console.log(now);
+    var distance = countDownDate - now;
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // document.getElementById("progress").innerHTML = hours + "h "
+    // + minutes + "m " + seconds + "s ";
+
+    var element = document.querySelector('.grid-item2');
+    element.setAttribute("value", "50%");
+    var width = 1;
+    element.style.width = width + "%";
+    element.innerHTML = width + "%";
+
+},1000);
 
 
 addTaskBtn.addEventListener("click", function () {
