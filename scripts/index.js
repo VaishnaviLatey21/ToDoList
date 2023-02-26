@@ -7,19 +7,19 @@ const priority = document.querySelector("#priority");
 const progressStatus = document.querySelector("#progressStatus");
 const closeBtn = document.querySelector(".btn_close");
 const checkBox = document.querySelector("#checkbox");
-const progressBar = document.querySelector('#progress');
+// const progressBar = document.querySelector('#progress');
 
 function addTask() {
     var task = document.createElement('div');
-    var box_container = document.createElement('div');
     var checkBox = document.createElement('input');
     checkBox.type = 'checkbox';
+    checkBox.classList.add("mycheckbox");
     var taskContent = document.createElement('div');
     var priorityDiv = document.createElement('div');
     var inProgress = document.createElement('div');
     var btn_container = document.createElement('div');
     var close_btn = document.createElement('button');
-    checkBox.checked = true; 
+    // checkBox.checked = true; 
     taskContent.innerText = newtask.value;
     priorityDiv.innerText = priority.value;
     inProgress.innerText = progressStatus.value;
@@ -30,17 +30,12 @@ function addTask() {
     });
 
     checkBox.addEventListener('click', function() {
-        if(checkBox.checked == true){
-            checkBox.checked = false
-        }else{
-            checkBox.checked = true
-        }
+        console.log("CHECKED");
     });
     // checkBox.style.display = 'block';
 
     btn_container.appendChild(close_btn);
-    box_container.appendChild(checkBox);
-    task.append(box_container);
+    task.append(checkBox);
     task.append(taskContent);
     task.append(priorityDiv);
     task.append(inProgress);
@@ -54,34 +49,35 @@ function addTask() {
 
 }
 
-// var countDownDate = new Date("Feb 26, 2023 18:00:00");
-// console.log(countDownDate);
-// var startDate = new Date("Feb 24, 2023, 17:30:00");
-// console.log(startDate);
-// var distanceWhole = countDownDate - startDate;
-// console.log(distanceWhole);
+var endDate = new Date("Feb 27, 2023 15:00:00");
+var startDate = new Date("Feb 23, 2023 15:00:00");
 
-var countDownDate = new Date("Feb 26, 2023 18:00:00");
-console.log(countDownDate);
-var x = setInterval(function() {
+console.log(endDate);
+console.log(startDate);
+
+function incrementPercentage() {
     var now = new Date();
-    console.log(now);
-    var distance = countDownDate - now;
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var distanceWhole = endDate - startDate;
+	var distanceLeft = endDate - now;
+    console.log(distanceWhole);
+    console.log(distanceLeft);
 
-    // document.getElementById("progress").innerHTML = hours + "h "
-    // + minutes + "m " + seconds + "s ";
+    var minLeft = Math.floor(distanceLeft / (1000 *  60));
+    var minTotal = Math.floor(distanceWhole / (1000 * 60));
+    var result = Math.floor(((minTotal - minLeft) / minTotal) * 100);
 
-    var element = document.querySelector('.grid-item2');
-    element.setAttribute("value", "50%");
-    var width = 1;
-    element.style.width = width + "%";
-    element.innerHTML = width + "%";
+    // var hours = Math.floor((distanceLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    // var minutes = Math.floor((distanceLeft % (1000 * 60 * 60)) / (1000 * 60));
+    // var seconds = Math.floor((distanceLeft % (1000 * 60)) / 1000);
 
-},1000);
+    var element = document.querySelector('.determinate1');
+    // var val = element.getAttribute("value");
+    element.setAttribute("value", String(Number(result) + 1));
+    console.log("incrementing value by 1, current value -  " + element.getAttribute("value"));
+    setInterval(incrementPercentage, 1000);
+}
 
+setInterval(incrementPercentage, 1000);
 
 addTaskBtn.addEventListener("click", function () {
     if (newtask.value == '' || priority.value == '' || progressStatus.value == '') {
